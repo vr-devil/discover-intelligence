@@ -6,4 +6,4 @@
 - 大疆机器人 [机甲大师 RoboMaster S1](https://www.dji.com/cn/robomaster-s1?site=brandsite&from=homepage) ， 6 类人工智能编程模块。
 
 # 问题 & 想法
-- 如何让植入人体的芯片使用本体内的生物电源？
+- 如何让植入人体的芯片使用身体内的生物电源？
