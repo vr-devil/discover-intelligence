@@ -11,5 +11,4 @@
 - [Runway ML](https://runwayml.com/) - Machine learning for creators；一个工具类产品，有多种机器学习的模型，比如图像生成，动作捕捉等，用于设计创造类的工作。
 
 # 问题 & 想法
-- 如何让植入人体的芯片使用身体内的生物电源？[#1](https://github.com/kai-zhong/discover-intelligence/issues/1)
 - 人工智能的核心构件有哪些？[#2](https://github.com/kai-zhong/discover-intelligence/issues/2)
