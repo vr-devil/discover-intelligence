@@ -4,6 +4,7 @@
 # 学习路径
 - [写给正在填报志愿并对CS/AI感兴趣的考生们-2019](https://zhuanlan.zhihu.com/p/68474477)
 - 机器学习基础知识 [Machine Learning Basics](http://www.deeplearningbook.org/contents/ml.html)
+- 卷积神经网络 [Convolutional Networks](http://www.deeplearningbook.org/contents/convnets.html)
 
 # 应用
 - [机甲大师 RoboMaster S1](https://www.dji.com/cn/robomaster-s1?site=brandsite&from=homepage) - 大疆机器人， 6 类人工智能编程模块。
