@@ -3,7 +3,7 @@
 
 # 学习路径
 - [写给正在填报志愿并对CS/AI感兴趣的考生们-2019](https://zhuanlan.zhihu.com/p/68474477)
-- 《Deep Learning》第5章-机器学习基础 [Chapter 5 - Machine Learning Basics](http://www.deeplearningbook.org/contents/ml.html)
+- 《Deep Learning》第5章-机器学习基础 / [Chapter 5 - Machine Learning Basics](http://www.deeplearningbook.org/contents/ml.html)
 - 《Deep Learning》第9章-卷积网络 / [Chapter 9 - Convolutional Networks](http://www.deeplearningbook.org/contents/convnets.html)；不适合初学者看，不过其中一节讲述了视觉皮层的结构和功能比较有趣。
 - 《Neural Networks and Deep Learning》第6章-深度学习 / [Chapter 6 - Deep Learning](http://neuralnetworksanddeeplearning.com/chap6.html)；通过讲解卷积神经网络学习深度学习，适合初学者学习。
 
