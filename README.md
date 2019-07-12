@@ -7,6 +7,7 @@
 - 《Deep Learning》[Chapter 9 - Convolutional Networks](http://www.deeplearningbook.org/contents/convnets.html) / 第9章-卷积网络，不适合初学者看，不过其中一节讲述了视觉皮层的结构和功能比较有趣。
 - 《Neural Networks and Deep Learning》[Chapter 6 - Deep Learning](http://neuralnetworksanddeeplearning.com/chap6.html) / 第6章-深度学习，通过讲解卷积神经网络学习深度学习，适合初学者学习。
 - [ImageNet Classification with Deep Convolutional Neural Networks](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf) 2012年这篇论文引发了深度学习的热潮，值得了解下。
+- 《Neural Networks and Deep Learning》[Chatper 2 - How the backpropagation algorithm works](http://neuralnetworksanddeeplearning.com/chap2.html) / 第2章-向后传播算法，训练神经网络的基本算法，必须得了解。
 
 # 应用
 - [机甲大师 RoboMaster S1](https://www.dji.com/cn/robomaster-s1?site=brandsite&from=homepage) - 大疆机器人， 6 类人工智能编程模块。
