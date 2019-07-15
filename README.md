@@ -15,4 +15,4 @@
 
 # 问题 & 想法
 - 人工智能的核心构件有哪些？[#2](https://github.com/kai-zhong/discover-intelligence/issues/2)
-- 梯度降下算法中求最小值的感想[#3](https://github.com/kai-zhong/discover-intelligence/issues/3)
+- 梯度降下算法中求最小值的想法[#3](https://github.com/kai-zhong/discover-intelligence/issues/3)
