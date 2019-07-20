@@ -9,6 +9,7 @@
 - [ImageNet Classification with Deep Convolutional Neural Networks](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf) 2012年这篇论文引发了深度学习的热潮，值得了解下。
 - 《Neural Networks and Deep Learning》[Learning with gradient descent](http://neuralnetworksanddeeplearning.com/chap1.html#learning_with_gradient_descent) / 学习梯度下降，简洁易懂。
 - 《Neural Networks and Deep Learning》[Chapter 2 - How the backpropagation algorithm works](http://neuralnetworksanddeeplearning.com/chap2.html) / 第2章-向后传播算法，训练神经网络的基本算法，必须得了解。
+- 《Neural Networks and Deep Learning》[Chapter 3 - Improving the way neural networks learn](http://neuralnetworksanddeeplearning.com/chap3.html) / 第3章-改善神经网络学习的方法，在该章节中了解交叉熵损失函数，正则化的概念以及一些可用的方法包括权重衰减(L2 正则化)、L1 正则化、Dropout。
 
 # 应用
 - [机甲大师 RoboMaster S1](https://www.dji.com/cn/robomaster-s1?site=brandsite&from=homepage) - 大疆机器人， 6 类人工智能编程模块。
