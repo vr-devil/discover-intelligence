@@ -13,6 +13,7 @@
 - [Keras](https://www.tensorflow.org/guide/keras) TensorFlow官网的Keras入门指南；Keras是一个用于构建和训练深度学习模型的高级API；学习Keras为接下来动手实践做准备。
 - [机器学习科研的十年](https://zhuanlan.zhihu.com/p/74249758)，对要走机器学习之路的同学应该能带来一些启示。
 - [Fashion-MNIST](https://github.com/zalandoresearch/fashion-mnist)，了解了下 Fashion-MNIST 数据集，在卷积网络的练习中使用。
+- [What is a batch-norm in machine learning?](https://www.quora.com/What-is-a-batch-norm-in-machine-learning)，在做卷积网络练习的时候为了提升模型在 Fashion-MNIST 的准确度，了解到有个叫 Batch Normalization 的方法可以提升模型效果，比起数据增强等其它的提升方法，Batch-Norm 更我让感兴趣，故学习学习。
 
 # 练习
 ## 卷积网络练习
