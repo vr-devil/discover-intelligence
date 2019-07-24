@@ -14,6 +14,16 @@
 - [机器学习科研的十年](https://zhuanlan.zhihu.com/p/74249758)，对要走机器学习之路的同学应该能带来一些启示。
 - [Fashion-MNIST](https://github.com/zalandoresearch/fashion-mnist)，了解了下 Fashion-MNIST 数据集，在卷积网络的练习中使用。
 
+# 练习
+## 卷积网络练习
+
+该练习分3个阶段：
+- 第一阶段是通过 Keras 的高级 API 搭建网络模型，不断地调整网络结构和参数，直到 Fashion-MNIST 的测试集取得92%的识别准确度后进入第二阶段；
+- 第二阶段是将第一阶段的模型使用 Tensorflow 的低级 API 实现；
+- 第三阶段是将第一阶段的模型使用纯 Python 实现。
+
+Keras 模型 - [keras_model.py](https://github.com/kai-zhong/discover-intelligence/blob/master/cnn_practice/keras_model.py)
+
 # 应用
 - [机甲大师 RoboMaster S1](https://www.dji.com/cn/robomaster-s1?site=brandsite&from=homepage) - 大疆机器人， 6 类人工智能编程模块。
 - [Runway ML](https://runwayml.com/) - Machine learning for creators；一个工具类产品，有多种机器学习的模型，比如图像生成，动作捕捉等，用于设计创造类的工作。
