@@ -25,12 +25,12 @@ model = tf.keras.models.Sequential([
     layers.Flatten(),
     layers.Dropout(0.4),
     layers.Dense(256, activation='relu'),
-    layers.Dense(256, activation='relu'),
+    layers.Dense(512, activation='relu'),
     layers.Dense(10, activation='softmax')
 ])
 
 model.compile(optimizer='SGD', loss='categorical_crossentropy', metrics=['accuracy'])
-model.fit(x_train, y_train, epochs=15)
+model.fit(x_train, y_train, epochs=30)
 model.evaluate(x_test, y_test)
 
-# test accuracy: 0.9018
+# test accuracy: 0.9097
