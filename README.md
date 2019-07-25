@@ -10,10 +10,12 @@
 - 《Neural Networks and Deep Learning》[Learning with gradient descent](http://neuralnetworksanddeeplearning.com/chap1.html#learning_with_gradient_descent) / 学习梯度下降，简洁易懂。
 - 《Neural Networks and Deep Learning》[Chapter 2 - How the backpropagation algorithm works](http://neuralnetworksanddeeplearning.com/chap2.html) / 第2章-向后传播算法，训练神经网络的基本算法，必须得了解。
 - 《Neural Networks and Deep Learning》[Chapter 3 - Improving the way neural networks learn](http://neuralnetworksanddeeplearning.com/chap3.html) / 第3章-改善神经网络学习的方法，在该章节中了解交叉熵损失函数，正则化的概念以及一些可用的方法包括权重衰减(L2 正则化)、L1 正则化、Dropout。
-- [Keras](https://www.tensorflow.org/guide/keras) TensorFlow官网的Keras入门指南；Keras是一个用于构建和训练深度学习模型的高级API；学习Keras为接下来动手实践做准备。
+- [Keras](https://www.tensorflow.org/guide/keras) TensorFlow官网的 Keras 入门指南； Keras 是一个用于构建和训练深度学习模型的高级API；学习Keras为接下来动手实践做准备。
 - [机器学习科研的十年](https://zhuanlan.zhihu.com/p/74249758)，对要走机器学习之路的同学应该能带来一些启示。
 - [Fashion-MNIST](https://github.com/zalandoresearch/fashion-mnist)，了解了下 Fashion-MNIST 数据集，在卷积网络的练习中使用。
 - [What is a batch-norm in machine learning?](https://www.quora.com/What-is-a-batch-norm-in-machine-learning)，在做卷积网络练习的时候为了提升模型在 Fashion-MNIST 的准确度，了解到有个叫 Batch Normalization 的方法可以提升模型效果，比起数据增强等其它的提升方法，Batch-Norm 更我让感兴趣，故学习学习。
+- [Batch normalization in Neural Networks](https://towardsdatascience.com/batch-normalization-in-neural-networks-1ac91516821c)，简单介绍 Batch Nomalization 的文章。
+- [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/abs/1502.03167)，原论文，拜读一下。
 
 # 练习
 ## 卷积网络练习
