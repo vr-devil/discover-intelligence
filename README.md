@@ -31,7 +31,7 @@
 
 [建模日志](https://github.com/kai-zhong/discover-intelligence/tree/master/cnn_practice)，将建模过程记录下来。
 
-Keras 模型 - [keras_model.py](https://github.com/kai-zhong/discover-intelligence/blob/master/cnn_practice/keras_model.py)， 当前模型在测试集的准确度为 0.9190。
+Keras 模型1 - [keras_model_1.py](https://github.com/kai-zhong/discover-intelligence/blob/master/cnn_practice/keras_model_1.py)， 当前模型在测试集的准确度为 0.9207。
 
 # 应用
 - [机甲大师 RoboMaster S1](https://www.dji.com/cn/robomaster-s1?site=brandsite&from=homepage) - 大疆机器人， 6 类人工智能编程模块。
