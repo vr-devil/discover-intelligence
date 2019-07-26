@@ -29,7 +29,7 @@
 - 第二阶段是选取第一阶段的三模型其一，然后使用 Tesnforlow 的低级 API 实现；
 - 第三阶段是将第二阶段的模型使用纯 Python 实现。
 
-[建模日志](https://github.com/kai-zhong/discover-intelligence/tree/master/cnn_practice)，将建模过程记录下来。
+[建模日志](https://github.com/kai-zhong/discover-intelligence/blob/master/cnn_practice/README.md)，将建模过程记录下来。
 
 Keras 模型1 - [keras_model_1.py](https://github.com/kai-zhong/discover-intelligence/blob/master/cnn_practice/keras_model_1.py)， 当前模型在测试集的准确度为 0.9207。
 
