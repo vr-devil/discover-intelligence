@@ -2,6 +2,8 @@
 **探索人工智能** 是一个学习项目，围绕项目主题了解什么是智能，有哪些人工智能的应用，以及如何实现人工智能。该项目记录学习过程中的想法，寻找到的资料，动手实践的成果。
 
 # 学习经历
+## 2019年
+### 7月
 - [写给正在填报志愿并对CS/AI感兴趣的考生们-2019](https://zhuanlan.zhihu.com/p/68474477)
 - 《Deep Learning》[Chapter 5 - Machine Learning Basics](http://www.deeplearningbook.org/contents/ml.html) / 第5章-机器学习基础 
 - 《Deep Learning》[Chapter 9 - Convolutional Networks](http://www.deeplearningbook.org/contents/convnets.html) / 第9章-卷积网络，不适合初学者看，不过其中一节讲述了视觉皮层的结构和功能比较有趣。
