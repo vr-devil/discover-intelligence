@@ -17,7 +17,7 @@
 - [Fashion-MNIST](https://github.com/zalandoresearch/fashion-mnist)，了解了下 Fashion-MNIST 数据集，在卷积网络的练习中使用。
 - [What is a batch-norm in machine learning?](https://www.quora.com/What-is-a-batch-norm-in-machine-learning)，在做卷积网络练习的时候为了提升模型在 Fashion-MNIST 的准确度，了解到有个叫 Batch Normalization 的方法可以提升模型效果，比起数据增强等其它的提升方法，Batch-Norm 更我让感兴趣，故学习学习。
 - [Batch normalization in Neural Networks](https://towardsdatascience.com/batch-normalization-in-neural-networks-1ac91516821c)，简单介绍 Batch Nomalization 的文章。
-- [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/abs/1502.03167)，原论文，拜读一下。
+- [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/abs/1502.03167)，Batch Normalization 原论文，拜读一下。
 
 # 练习
 ## 卷积网络练习
