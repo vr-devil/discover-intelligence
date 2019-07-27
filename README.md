@@ -18,6 +18,7 @@
 - [What is a batch-norm in machine learning?](https://www.quora.com/What-is-a-batch-norm-in-machine-learning)，在做卷积网络练习的时候为了提升模型在 Fashion-MNIST 的准确度，了解到有个叫 Batch Normalization 的方法可以提升模型效果，比起数据增强等其它的提升方法，Batch-Norm 更我让感兴趣，故学习学习。
 - [Batch normalization in Neural Networks](https://towardsdatascience.com/batch-normalization-in-neural-networks-1ac91516821c)，简单介绍 Batch Nomalization 的文章。
 - [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/abs/1502.03167)，Batch Normalization 原论文，拜读一下。
+- [GPU Support](https://www.tensorflow.org/install/gpu)，Tensorflow 的 GPU 支持。 在2013年的MacbookPro上使用 CPU 训练实在是太慢了，Fashion-MNIST 训练30轮需要半小时，把我暗影精灵3上的 Nvidia GTX 1060 利用起来。
 
 # 练习
 ## 卷积网络练习
