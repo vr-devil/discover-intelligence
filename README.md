@@ -32,7 +32,7 @@
 
 [建模日志](https://github.com/kai-zhong/discover-intelligence/blob/master/cnn_practice/README.md)，将建模过程记录下来。
 
-Keras 模型1 - [keras_model_1.py](https://github.com/kai-zhong/discover-intelligence/blob/master/cnn_practice/keras_model_1.py)，准确度为 92.07%。
+Keras 模型1 - [keras_model_1.py](https://github.com/kai-zhong/discover-intelligence/blob/master/cnn_practice/keras_model_1.py)，准确度为 92.05%。
 
 Keras 模型2 - [keras_model_2.py](https://github.com/kai-zhong/discover-intelligence/blob/master/cnn_practice/keras_model_2.py)，准确度为 92.24%。
 
