@@ -7,3 +7,4 @@
 - 将训练次数从30改为50后，达到了92.05%的准确度，第一个模型算是完成了，共花费了2天的时间，也不算难。参见模型代码 [keras_model_1.py](https://github.com/kai-zhong/discover-intelligence/blob/master/cnn_practice/keras_model_1.py)
 - 第一阶段原本是计划将模型达到92%的精确度就进入第二阶段，不曾想很快就达到了，觉得有点过于简单，且似乎觉得模型不是很简洁，所以改变第一阶段的目标，实现三个不同网络结构的模型都达到92%的准确度，这样一来能更好的从练习中学习更多的知识，获得更多的经验。
 - 构建第二个模型特意避免使用 Batch Normalization 来提升模型效果，而是通过扩大参数规模来提升，参考了 [ImageNet Classification with Deep Convolutional Neural Networks](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf) 这篇经典论文中网络模型参数的配置，并采用了 Adagrad 做为训练方法，最终第二个模型的准确度达到了 92.24%，着实让人惊喜，原本以为不使用 Batch-Norm 可能只会勉强达到 92% 的准确度。参见模型代码  [keras_model_2.py](https://github.com/kai-zhong/discover-intelligence/blob/master/cnn_practice/keras_model_2.py)
+- 构建第三个模型的时候决定再次改变下第一阶段的目标，改为使模型的准确度达到93%，因为提高准确度同样需要进行更多的尝试，与应用更多的方法。
