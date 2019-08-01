@@ -13,3 +13,4 @@
 - 构建第三个模型的时候决定再次改变下第一阶段的目标，改为使模型的准确度达到93%，因为提高准确度同样需要进行更多的尝试，与应用更多的方法。
 - 第三个模型同时使用了 Batch Normalizatin 和 更大规模的参数，使得准确度提高到了92.59%。参见模型代码 [02f6a19 - keras_model_3.py](https://github.com/kai-zhong/discover-intelligence/blob/02f6a19ae329539241ee8c9b2277461907e20791/cnn_practice/keras_model_3.py)
 - 将两个卷积层的过滤器数量增大一倍，准确度达到了 92.63%。参见模型代码 [d66815e - keras_model_3.py](https://github.com/kai-zhong/discover-intelligence/blob/d66815ecde8deb7943dd999ff04e4a7577d33918/cnn_practice/keras_model_3.py)
+- 将模型从两个卷积层增加四个，准确度达到了 92.91%，深度模型的效果明显~，离 93% 不远了。参见模型代码 [8bd51c3 - keras_model_3.py](https://github.com/kai-zhong/discover-intelligence/blob/8bd51c3cab107794f5b3dfe7470459b4a94ef636/cnn_practice/keras_model_3.py)
