@@ -26,9 +26,9 @@ model = tf.keras.models.Sequential([
     layers.MaxPool2D((2, 2)),
     layers.Flatten(),
     layers.BatchNormalization(),
-    layers.Dense(2048, activation='sigmoid'),
+    layers.Dense(2048, activation='relu'),
     layers.BatchNormalization(),
-    layers.Dense(1000, activation='sigmoid'),
+    layers.Dense(1000, activation='relu'),
     layers.BatchNormalization(),
     layers.Dense(10, activation='softmax')
 ])
