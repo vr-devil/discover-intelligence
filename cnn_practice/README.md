@@ -15,3 +15,4 @@
 - 将两个卷积层的过滤器数量增大一倍，准确度达到了 92.63%。参见模型代码 [d66815e - keras_model_3.py](https://github.com/kai-zhong/discover-intelligence/blob/d66815ecde8deb7943dd999ff04e4a7577d33918/cnn_practice/keras_model_3.py)
 - 将模型从两个卷积层增加四个，准确度达到了 92.91%，深度模型的效果明显~，离 93% 不远了。 参见模型代码 [8bd51c3 - keras_model_3.py](https://github.com/kai-zhong/discover-intelligence/blob/8bd51c3cab107794f5b3dfe7470459b4a94ef636/cnn_practice/keras_model_3.py)
 - 将模型从四个卷积层减少至三个，同时将两个稠密层的参数从 2048 减少至 1024，同样达到了 92.91% 的准确度。 参见模型代码 [9f09480 - keras_model_3.py](https://github.com/kai-zhong/discover-intelligence/blob/9f09480c1614b717275dd14a1791dec7d6accc9d/cnn_practice/keras_model_3.py)
+- 在卷积层之后加上 Batch Normalization，并将训练次数从 50 增加到 100，模型达到了 93.11% 的准确度，可喜可贺啊，再调调说不定都能达到 94% ；不给过觉的目前模型看上去不是很简洁，再调整下。参见模型代码 [3e7b56c - keras_model_3.py](https://github.com/kai-zhong/discover-intelligence/blob/master/cnn_practice/keras_model_3.py)
