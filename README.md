@@ -20,7 +20,7 @@
 - [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/abs/1502.03167)，Batch Normalization 原论文，拜读一下。
 - [GPU Support](https://www.tensorflow.org/install/gpu)，Tensorflow 的 GPU 支持。 在2013年的 Macbook Pro 上使用 CPU 训练实在是太慢了，Fashion-MNIST 训练30轮需要半小时，把我暗影精灵3上的 Nvidia GTX 1060 利用起来。
 ### 8月
-- [An Introduction to AdaGrad](https://medium.com/konvergen/an-introduction-to-adagrad-f130ae87182)，在做卷积网络练习的时候采用了 AdaGrad 进行模型的训练；AdaGrad 的论文([Adaptive Subgradient Methods for
+- [An Introduction to AdaGrad](https://medium.com/konvergen/an-introduction-to-adagrad-f130ae871827)，在做卷积网络练习的时候采用了 AdaGrad 进行模型的训练；AdaGrad 的论文([Adaptive Subgradient Methods for
 Online Learning and Stochastic Optimization](http://www.jmlr.org/papers/volume12/duchi11a/duchi11a.pdf))太长了，所以找了篇入门文章简单了解下。
 - [Low Level API - Introduction](https://www.tensorflow.org/guide/low_level_intro)，TensorFlow 的低级 API 入门；卷积网络练习的第一阶段已经达到了在 Fashion-MNIST 数据集上取得 93% 以上准确度的目标，开始进入练习的第二阶段，使用 TensorFlow 低级 API 实现第一阶段创建的模型。
 
