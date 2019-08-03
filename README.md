@@ -37,7 +37,7 @@ Keras 模型1 - [keras_model_1.py](https://github.com/kai-zhong/discover-intelli
 
 Keras 模型2 - [keras_model_2.py](https://github.com/kai-zhong/discover-intelligence/blob/master/cnn_practice/keras_model_2.py)，准确度为 92.24%。
 
-Keras 模型3 - [keras_model_2.py](https://github.com/kai-zhong/discover-intelligence/blob/master/cnn_practice/keras_model_2.py)，准确度为 94.38%。
+Keras 模型3 - [keras_model_3.py](https://github.com/kai-zhong/discover-intelligence/blob/master/cnn_practice/keras_model_3.py)，准确度为 94.38%。
 
 # 应用
 - [机甲大师 RoboMaster S1](https://www.dji.com/cn/robomaster-s1?site=brandsite&from=homepage) - 大疆机器人， 6 类人工智能编程模块。
