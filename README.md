@@ -25,6 +25,7 @@ Online Learning and Stochastic Optimization](http://www.jmlr.org/papers/volume12
 - TensorFlow - Low Level API：[Introduction](https://www.tensorflow.org/guide/low_level_intro)、[Tensors](https://www.tensorflow.org/guide/tensors)、[Variables](https://www.tensorflow.org/guide/variables)、[Graphs and Sessions
 ](https://www.tensorflow.org/guide/graphs)、[AutoGraph: Easy control flow for graphs
 ](https://www.tensorflow.org/guide/autograph)；TensorFlow 的低级 API 入门；卷积网络练习的第一阶段已经达到了在 Fashion-MNIST 数据集上取得 93% 以上准确度的目标，开始进入练习的第二阶段，使用 TensorFlow 低级 API 实现第一阶段创建的模型。
+- [What's the difference of name scope and a variable scope in tensorflow?](https://stackoverflow.com/questions/35919020/whats-the-difference-of-name-scope-and-a-variable-scope-in-tensorflow)，在使用 TF 的变量时，没搞清楚定变量的命名空间的问题。
 
 # 练习
 ## 卷积网络练习
