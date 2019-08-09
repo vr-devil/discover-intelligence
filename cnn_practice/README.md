@@ -23,3 +23,4 @@
 最初只是想构建一个简单的卷积网络能正常的处理 Fashion-MNIST 数据集，就像 [模型1](https://github.com/kai-zhong/discover-intelligence/blob/master/cnn_practice/keras_model_1.py) 只有一个卷积层；但最初的想法过于简单很快就实现了，这让我有些意犹未尽，就想尝试尝试更的深网络结构，在尝试后发现准确度有所提升了，超过了 90%，因为在只有一个卷积层的模型中，准确度很难超过90%， 通常只到 89% 左右；在不断地调整过程中，准确度不断地随之提升，激起了我达到更好结果的欲望，起先的目标是达到 92%，很快就实现了，然后 93%，最后 94%。其实这个过程是学了很多东西的，比如了解到了 Batch Normalization 和 Adagrad，都能提升模型效果，还实际感受到了模型参数规模过大会造成过拟合，Dropout 的使用能有效的缓解过拟合的问题。在不断尝试的过程中，能越来越感知到可以提升模型效果的方向，不过还是很缺乏理论上更有直觉的认识。总之整个过程花费差不多一星期的时间，收获很多，很满足，很开心。
   
 ## 阶段二：使用 TensorFlow 低级 API 实现第一阶段模型
+- 刚开始的时候完全无从下手，不知道该先从什么地方实现模型，琢磨了一番后决定先从最简单的网络结构开始实现，让样本能够经过一个稠密层, 激活函数使用 softmax，能够正常输出即可。参见模型代码 [d72595f - tf_model.py](https://github.com/kai-zhong/discover-intelligence/blob/d72595f7482c03577b64dc3cced39f0a4e89955a/cnn_practice/tf_model.py) [d72595f tf_model_layers.py](https://github.com/kai-zhong/discover-intelligence/blob/d72595f7482c03577b64dc3cced39f0a4e89955a/cnn_practice/tf_model_layers.py)
