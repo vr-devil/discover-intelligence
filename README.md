@@ -28,6 +28,7 @@ Online Learning and Stochastic Optimization](http://www.jmlr.org/papers/volume12
 - [What's the difference of name scope and a variable scope in tensorflow?](https://stackoverflow.com/questions/35919020/whats-the-difference-of-name-scope-and-a-variable-scope-in-tensorflow)，在使用 TF 的变量时，没搞清楚定变量的命名空间的问题。
 - 《动手学深度学习》[softmax回归](https://zh.gluon.ai/chapter_deep-learning-basics/softmax-regression.html)，回顾下 Softmax，在卷积网络练习种得自己实现下。
 - [TensorFlow Debugger](https://www.tensorflow.org/guide/debugger)，在实现 softmax 时候，发现输出得值总是 nan， 所以了解了如何调试 TensorFlow，期间尝试了 TensorBoard 和 CLI 两个调式方式，CLI 的方式比较好用些。 
+- [How to Implement Minibatching in Tensorflow](http://deeplearnphysics.org/Blog/minibatch.html)，如何在 TensorFlow 中实现小批量的样本输入。
 
 # 练习
 ## 卷积网络练习
