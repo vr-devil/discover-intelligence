@@ -1,6 +1,11 @@
 import tensorflow as tf
 
 
+def sigmoid(z):
+    with tf.name_scope('sigmoid'):
+        return 1. / (1. + tf.exp(-z))
+
+
 def relu(z):
     return tf.maximum(0., z, name='relu')
 
@@ -8,35 +13,47 @@ def relu(z):
 def softmax(logits):
     with tf.name_scope('softmax'):
         logits_exp = tf.exp(logits)
-        logits_sum = tf.reduce_sum(logits_exp)
-        a = logits_exp / logits_sum
+        logits_sum = tf.reduce_sum(logits_exp, 1)
+        a = tf.matmul(tf.linalg.tensor_diag(1 / logits_sum), logits_exp)
     return a
+
+
+def cross_entropy(y_hat, y):
+    with tf.name_scope('cross_entropy'):
+        return tf.negative(tf.add(y * tf.math.log(y_hat), (1 - y) * tf.math.log(1 - y_hat)))
 
 
 class Flatten(object):
     def __call__(self, *args, **kwargs):
         with tf.name_scope('flatten'):
             x = args[0]
-            a = tf.reshape(x, [1, tf.reduce_prod(x.shape)])
+            a = tf.reshape(x, [x.shape[0].value, -1])
         return a
 
 
 class Dense(object):
-    def __init__(self, units, activation):
+    def __init__(self, units, activation=None):
         self.units = units
         self.activation = activation
 
     def __call__(self, *args, **kwargs):
         with tf.name_scope('dense'):
             x = args[0]
-            w_shape = [x.shape[1], self.units]
+            w_shape = [x.shape[1].value, self.units]
             b_shape = [self.units]
 
-            self.w = tf.Variable(tf.ones(w_shape), name='weights', shape=w_shape, dtype=tf.float32)
-            self.b = tf.Variable(tf.ones(b_shape), name='biases', shape=b_shape, dtype=tf.float32)
+            self.w = tf.Variable(tf.random.normal(w_shape, stddev=0.1),
+                                 name='weights', shape=w_shape)
+            self.b = tf.Variable(tf.random.normal(b_shape),
+                                 name='biases', shape=b_shape)
 
             z = tf.linalg.matmul(x, self.w) + self.b
-            a = self.activation(z)
+
+            if self.activation:
+                a = self.activation(z)
+            else:
+                a = z
+
         return a
 
 
