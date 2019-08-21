@@ -19,9 +19,15 @@
 - 增加了一个卷积层，训练方法从 AdaGrad 换成 SGD，学习率为 TensorFlow 默认的 0.01，模型用了较短的训练时间就达到了 93% 以上的准确度，最好的时候达到了 93.87%，真是惊讶不已，通过调整学习率能有效的提升模型效果，再继续调整下模型争取到达 94%。参见模型代码 [1c9b863 - keras_model_3.py](https://github.com/kai-zhong/discover-intelligence/blob/1c9b8630f405f08d71f76ea6c792c5237e2e87a9/cnn_practice/keras_model_3.py)
 - 将输出层之前的一个 Batch Normalization 移除掉后，在 Epoch 94/100 时刚好达到了 94.00% 的准确度，实属侥幸啊。最后再调一波，使模型稳定得达到 94% 就结束第一阶段，✌。参见模型代码 [2add9b0 - keras_model_3.py](https://github.com/kai-zhong/discover-intelligence/blob/2add9b074efdfb0cd0bfef5e8cb63ea6ec62d2b8/cnn_practice/keras_model_3.py)
 - 经过一番调整，模型终于能稳定的达到 94.00% 以上的准确了，最好的时候达到了 94.38%，且网络结构和参数规模均变小了；突破 94% 的关口主要的途径是解决训练集过拟合的问题，Dropout 还是比较有效的；虽然觉的还可以继续提升模型效果，但该练习的目标已经完全达到了，该进入下一阶段了。 参见最终模型代码 [kers_model_3.py](https://github.com/kai-zhong/discover-intelligence/cnn_practice/keras_model_3.py)
-### 第一阶段总结
+### 总结
 最初只是想构建一个简单的卷积网络能正常的处理 Fashion-MNIST 数据集，就像 [模型1](https://github.com/kai-zhong/discover-intelligence/blob/master/cnn_practice/keras_model_1.py) 只有一个卷积层；但最初的想法过于简单很快就实现了，这让我有些意犹未尽，就想尝试尝试更的深网络结构，在尝试后发现准确度有所提升了，超过了 90%，因为在只有一个卷积层的模型中，准确度很难超过90%， 通常只到 89% 左右；在不断地调整过程中，准确度不断地随之提升，激起了我达到更好结果的欲望，起先的目标是达到 92%，很快就实现了，然后 93%，最后 94%。其实这个过程是学了很多东西的，比如了解到了 Batch Normalization 和 Adagrad，都能提升模型效果，还实际感受到了模型参数规模过大会造成过拟合，Dropout 的使用能有效的缓解过拟合的问题。在不断尝试的过程中，能越来越感知到可以提升模型效果的方向，不过还是很缺乏理论上更有直觉的认识。总之整个过程花费差不多一星期的时间，收获很多，很满足，很开心。
   
 ## 阶段二：使用 TensorFlow 低级 API 实现第一阶段模型
 - 刚开始的时候完全无从下手，不知道该先从什么地方实现模型，琢磨了一番后决定先从最简单的网络结构开始实现，让样本能够经过一个稠密层, 激活函数使用 softmax，能够正常输出即可。参见模型代码 [d72595f - tf_model.py](https://github.com/kai-zhong/discover-intelligence/blob/d72595f7482c03577b64dc3cced39f0a4e89955a/cnn_practice/tf_model.py) [d72595f - tf_model_layers.py](https://github.com/kai-zhong/discover-intelligence/blob/d72595f7482c03577b64dc3cced39f0a4e89955a/cnn_practice/tf_model_layers.py)
 - 弄了好几天终于正确实现了 softmax 和 crossentropy，这个过程中遇到了好些问题，比如权重初始化不合适会照成 softmax 的输出值为 inf 或 nan，还有些基本的矩阵计算问题（学艺不精导致），为了调试这些问题，学习了 TensorFlow Debugger；其它还完成了模型训练部分的功能，比如优化损失函数（优化器使用 TF 提供的 AdagradOptimizer，之后也不准备在该阶段自己实现了）和验证测试集。参见模型代码 [cccd8f7 - tf_model.py](https://github.com/kai-zhong/discover-intelligence/blob/7e9f47ac612c5492978aad21d5edc5d319afae3a/cnn_practice/tf_model.py) [cccd8f7 - tf_model_layers.py](https://github.com/kai-zhong/discover-intelligence/blob/7e9f47ac612c5492978aad21d5edc5d319afae3a/cnn_practice/tf_model_layers.py)
+- 实现卷积层过程真是曲折，基于计算图构建模型在好些控制逻辑上不知道如何处理，主要是将图片切割成小块时的逻辑，切割完了得将所有小块合并成一个 Tensor， 方便进行矩阵运算。最后还是勉强实现了卷积层，不过感觉与 TensorFlow 提供的相比，性能要差一些。
+### 总结
+第二阶段的难度比想象的要大，全部自己实现算法是一个很大的工程，非常多的细节需要处理，最终自己实现了一小部分，比如卷积层、稠密层，其余的还是使用了 TensorFlow 提供的接口。自己实现的运算性能不如 TensorFlow 提供的好，还有比如 loss 的数值容易为 nan ，也不知其原因，排查起来非常的耗时，需要大量的知识。总之第二阶段的模型与第一阶段的模型3的结构是一样的，能够正常运行，但性能差的太多，精确度不知道能不能达到一样的结果，因为训练太慢了就不耐烦等了。参见模型代码 [tf_model.py](https://github.com/kai-zhong/discover-intelligence/blob/master/cnn_practice/tf_model.py) [tf_model_layers.py](https://github.com/kai-zhong/discover-intelligence/blob/master/cnn_practice/tf_model_layers.py)
+
+## 阶段三：使用纯 Python 实现第一阶段的模型
+这个阶段我放弃了，第二阶段就花了近两星期的时间才实现了很小一部分。此外觉的有些偏离的学习的轨道，其实这个阶段是一个工程问题，与学习机器学习的理论来说，已经超纲了。
