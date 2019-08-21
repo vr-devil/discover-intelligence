@@ -1,4 +1,5 @@
 import tensorflow as tf
+import math
 
 
 def sigmoid(z):
@@ -44,7 +45,7 @@ class Dense(object):
 
             self.w = tf.Variable(tf.random.normal(w_shape, stddev=0.1),
                                  name='weights', shape=w_shape)
-            self.b = tf.Variable(tf.random.normal(b_shape),
+            self.b = tf.Variable(tf.zeros(b_shape),
                                  name='biases', shape=b_shape)
 
             z = tf.linalg.matmul(x, self.w) + self.b
@@ -63,19 +64,52 @@ class Conv2D(object):
         self.kernel_size = kernel_size
 
     def __call__(self, *args, **kwargs):
-        pass
+        with tf.name_scope('conv_2d'):
+            x = args[0]
+
+            w_shape = [self.kernel_size ** 2 * x.shape[3].value, self.filters]
+            b_shape = [self.filters]
+
+            self.w = tf.Variable(tf.random.normal(w_shape, stddev=0.1),
+                                 name='weights', shape=w_shape)
+            self.b = tf.Variable(tf.zeros(b_shape),
+                                 name='biases', shape=b_shape)
+
+            patched_x = tf.image.extract_image_patches(
+                x,
+                [1, self.kernel_size, self.kernel_size, 1],
+                [1, 1, 1, 1],
+                [1, 1, 1, 1],
+                padding='SAME'
+            )
+
+            z = relu(tf.linalg.matvec(self.w, patched_x, transpose_a=True) + self.b)
+            return z
 
 
 class MaxPool2D(object):
     def __init__(self, pool_size):
         self.pool_size = pool_size
 
+    def __call__(self, *args, **kwargs):
+        with tf.name_scope('max_pool_2d'):
+            x = args[0]
+            return tf.nn.max_pool2d(x, self.pool_size, self.pool_size, padding='VALID')
+
 
 class BatchNormalization(object):
     def __init__(self):
         pass
 
+    def __call__(self, *args, **kwargs):
+        x = args[0]
+        return tf.keras.layers.BatchNormalization()(x)
+
 
 class Dropout(object):
     def __init__(self, rate):
         self.rate = rate
+
+    def __call__(self, *args, **kwargs):
+        x = args[0]
+        return tf.nn.dropout(x, rate=self.rate)

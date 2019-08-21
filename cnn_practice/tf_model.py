@@ -10,6 +10,9 @@ fashion_mnist = tf.keras.datasets.fashion_mnist
 (x_train, y_train), (x_test, y_test) = fashion_mnist.load_data()
 x_train, x_test = x_train / 255., x_test / 255.
 
+x_train = np.reshape(x_train, (60000, 28, 28, 1))
+x_test = np.reshape(x_test, (10000, 28, 28, 1))
+
 y_train = tf.keras.utils.to_categorical(y_train, 10)
 y_test = tf.keras.utils.to_categorical(y_test, 10)
 
@@ -22,12 +25,23 @@ test_batch_num = math.ceil(10000 / batch_size)
 
 # 创建模型
 model = [
+    layers.Conv2D(96, 5),
+    layers.MaxPool2D([2, 2]),
+    layers.BatchNormalization(),
+    layers.Conv2D(192, 3),
+    layers.BatchNormalization(),
+    layers.Conv2D(128, 3),
+    layers.MaxPool2D([2, 2]),
+    layers.Dropout(0.5),
     layers.Flatten(),
-    layers.Dense(100, activation=layers.relu),
-    layers.Dense(10, activation=layers.softmax)
+    layers.BatchNormalization(),
+    layers.Dense(512, activation=layers.relu),
+    layers.BatchNormalization(),
+    layers.Dense(512, activation=layers.relu),
+    layers.Dense(10)
 ]
 
-x = tf.placeholder(dtype=tf.float32, shape=[batch_size, 28, 28])
+x = tf.placeholder(dtype=tf.float32, shape=[batch_size, 28, 28, 1])
 y = tf.placeholder(dtype=tf.float32, shape=[batch_size, 10])
 
 a = x
@@ -36,13 +50,18 @@ for layer in model:
 y_pred = a
 
 # 训练
-loss = tf.reduce_mean(layers.cross_entropy(y_pred, y), name='loss_mean')
+loss = tf.nn.softmax_cross_entropy_with_logits_v2(y, y_pred)
+# loss = tf.reduce_mean(layers.cross_entropy(y_pred, y), name='loss_mean')
 
 optimizer = tf.train.AdagradOptimizer(0.01)
 train = optimizer.minimize(loss)
 
 correct_pred = tf.equal(tf.argmax(y_pred, 1), tf.argmax(y, 1))
 accuracy = tf.reduce_mean(tf.cast(correct_pred, tf.float32))
+
+writer = tf.summary.FileWriter('d:\\tf_events')
+writer.add_graph(tf.get_default_graph())
+writer.flush()
 
 sess = tf.Session()
 # sess = tf_debug.LocalCLIDebugWrapperSession(sess)
@@ -81,7 +100,4 @@ for epoch in range(epochs):
     print('val_loss: {:.4f} - val_acc: {:.4f}'.format(np.mean(loss_log), np.mean(acc_log)))
 
 
-# writer = tf.summary.FileWriter('d:\\tf_events')
-# writer.add_graph(tf.get_default_graph())
-# writer.flush()
 
