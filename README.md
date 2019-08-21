@@ -45,8 +45,11 @@ Online Learning and Stochastic Optimization](http://www.jmlr.org/papers/volume12
  - Keras 模型2 - [keras_model_2.py](https://github.com/kai-zhong/discover-intelligence/blob/master/cnn_practice/keras_model_2.py)，准确度为 92.24%。
  - Keras 模型3 - [keras_model_3.py](https://github.com/kai-zhong/discover-intelligence/blob/master/cnn_practice/keras_model_3.py)，准确度为 94.38%。
 
-第二阶段（进行中）：
+第二阶段：
   - TF 模型 - [tf_model.py](https://github.com/kai-zhong/discover-intelligence/blob/master/cnn_practice/tf_model.py) 和  [tf_model_layers.py](https://github.com/kai-zhong/discover-intelligence/blob/master/cnn_practice/tf_model_layers.py)
+  
+ 第三阶段：
+ 已放弃。
 
 # 机器学习在线课程
 - [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com)
