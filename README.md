@@ -56,6 +56,7 @@ Online Learning and Stochastic Optimization](http://www.jmlr.org/papers/volume12
 - [Deep Learning](http://www.deeplearningbook.org)
 - [机器学习速成课程](https://developers.google.com/machine-learning/crash-course/?hl=zh-cn)
 - [动手学深度学习](https://zh.gluon.ai/)
+- [Elements of AI](https://course.elementsofai.com/)
 
 # 应用
 - [机甲大师 RoboMaster S1](https://www.dji.com/cn/robomaster-s1?site=brandsite&from=homepage) - 大疆机器人， 6 类人工智能编程模块。
